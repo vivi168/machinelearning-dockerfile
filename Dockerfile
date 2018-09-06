@@ -16,6 +16,7 @@ RUN ${PIP} install --upgrade \
 
 RUN ${PIP} install tensorflow \
   jupyter \
+  jupyterlab \
   seaborn \
   scipy \
   scikit-learn \
@@ -26,4 +27,4 @@ RUN mkdir /.local && chmod a+rwx /.local
 WORKDIR /notebooks
 EXPOSE 8888
 
-CMD ["bash", "-c", "jupyter notebook --notebook-dir=/notebooks --ip 0.0.0.0 --no-browser --allow-root"]
+CMD ["bash", "-c", "jupyter lab --notebook-dir=/notebooks --ip 0.0.0.0 --no-browser --allow-root"]
