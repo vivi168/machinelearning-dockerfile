@@ -1,11 +1,11 @@
 # Build
 
 ```
-docker build -t tf-test .
+docker-compose build
 ```
 
 # Run
 
 ```
-docker run -it -p 8888:8888 -v $(pwd)/notebooks:/notebooks tf-test
+docker-compose up
 ```
