@@ -1,0 +1,9 @@
+version: '3'
+services:
+  notebook:
+    build: .
+    command: jupyter lab --notebook-dir=/notebooks --ip 0.0.0.0 --no-browser --allow-root
+    volumes:
+      - ./notebooks:/notebooks
+    ports:
+      - "8989:8888"
